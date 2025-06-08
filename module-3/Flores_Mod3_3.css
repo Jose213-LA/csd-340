@@ -1,0 +1,52 @@
+h1 {
+    text-align: center;
+}
+
+#left-div,
+#right-div {
+    width: 45%;
+}
+
+#bottom-div {
+    width: 100%;
+    margin-top: 60px;
+    text-align: right;
+    margin-bottom: 20px;
+    float: right;
+}
+
+h3 {
+    font-weight: 500;
+    margin-top: 0;
+}
+
+/* Common box styling */
+.list-box {
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: 300;
+}
+
+/* Ordered list box */
+.ordered {
+    border: 1px solid red;
+}
+
+.ordered ol {
+    list-style-position: inside;
+}
+
+/* Unordered list box */
+.unordered {
+    border: 1px dashed red;
+}
+
+.unordered ul {
+    list-style: upper-roman;
+    list-style-position: inside;
+}
+
+/* Link hover effect */
+a:hover {
+    text-decoration: underline;
+}
