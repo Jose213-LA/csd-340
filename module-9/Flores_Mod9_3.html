@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='en'>
+<!--
+      Jose Flores
+      Assignment 9.3
+-->
+    <head>
+       <meta charset="UTF-8">
+       <title>CSD 340 Web Development with HTML and CSS</title>
+       
+       <script>
+           var firstVariableValue = "El Salvador";
+	   var secondVariableValue = "Mexican-American";
+	   var thirdVariableValue = "Adobe Premiere Pro";
+	   var fourthVariableValue = "Frito Lay";	
+       </script>
+
+	<style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            font-size: 18px;
+        }
+
+
+	h1 {
+           font-weight: 700;
+           text-transform: uppercase;
+           text-align: center;
+	   margin-bottom: 3%;
+	}
+
+
+        button {
+            margin-top: 0.5em;
+        }
+       
+	
+	a {
+	    float: right;
+	    font-style: italic;
+	    margin-top: 17%;
+	    font-size: 16px;
+	   
+	}  
+
+     
+    </style>
+    </head>
+
+    <body>
+       <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+       <p>Hi, my name is Jose Flores. I was born and raised in Los Angeles, California. 
+          It’s a big city with people from many different places. My parents are from <span id = "El Salvador">_________</span>, 
+          a small country in Central America. They immigrated to the United States during a time of 
+          deep political unrest and civil war. Fearing for their safety and dreaming of a better future, 
+          they left behind everything they knew: their family, their culture, and their language, 
+          to start fresh in a new country. That experience shaped not only their lives, but mine as well.</p>
+
+       <button type="button"
+       onclick="document.getElementById('El Salvador').innerHTML = firstVariableValue">
+       Reveal</button>
+
+       <p id="El Salvador"></p>
+
+	<p>Growing up in L.A. was interesting. I met people from many different cultures. 
+	   Most of my friends were <span id = "Mexican-American">_________</span>, I spent a lot of time with them, so I 
+           learned about their food, music, and holidays. We ate tacos, listened to mariachi music, 
+           and celebrated special days like Día de los Muertos. Because I was around Mexican culture so much, 
+           I didn’t feel very close to my own Salvadoran background. But as I got older, I wanted to learn more 
+           about where my parents came from.</p>
+        
+       <button type="button"
+       onclick="document.getElementById('Mexican-American').innerHTML = secondVariableValue">
+       Reveal</button>
+
+       <p id="Mexican-American"></p>
+
+       <p>I’ve always liked art, music, and movies. I enjoy drawing, and I also play the drums. 
+          Being creative has always been something I love. I went to college and got a degree in film. 
+          I enjoy editing videos and working with special effects. I’ve learned how to use programs like 
+          <span id = "Adobe Premiere Pro">_________</span> and Photoshop to make cool and creative projects.</p>
+
+       <button type="button"
+       onclick="document.getElementById('Adobe Premiere Pro').innerHTML = thirdVariableValue">
+       Reveal</button>
+
+       <p id="Adobe Premiere Pro"></p>
+
+       <p>Right now, I work at <span id = "Frito Lay">_________</span> in a warehouse. It’s not my dream job, but it helps me pay the 
+          bills and learn how to work hard. Some of my coworkers are studying technology. They are learning 
+          about cybersecurity and IT. Talking to them got me interested in the tech field too. Now, 
+          I want to learn more about it. I know it won’t be easy, but I’m ready to work hard, study, and grow. 
+          I believe I can do it if I stay focused and learn everything I can from my teachers and classmates.</p>
+
+       <button type="button"
+       onclick="document.getElementById('Frito Lay').innerHTML = fourthVariableValue">
+       Reveal</button>
+
+       <p id="Frito Lay"></p>
+   
+     
+
+       <p><a href="../index.html">back to Landing Page</a></p>
+       
+ </body>
+<html>
+
+
+
+
+
