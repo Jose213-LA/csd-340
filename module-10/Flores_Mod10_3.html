@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    .mainImage {
+      border: 2px solid black;
+      margin-top: 20px;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    a {
+	float: right;
+	font-style: italic;
+	margin-top: 16%;
+	font-size: 16px;
+	color: white;
+      }
+
+    h1 {
+	text-align: center;	
+	background-color: DarkSlateGray;
+	color: white;
+	padding-top: 1%;
+	padding-bottom: 1%;
+       }  
+
+    p:hover {
+	color: Maroon;
+       }
+
+    p {
+	background-color: DarkSlateGray;
+	color: white;
+      }
+
+    .bottom a {
+	background-color: DarkSlateGray;
+	border: 1px solid DarkSlateGray;
+	width: 100%;
+	text-align: right;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	padding-right: 1%;
+      }	
+
+      a:hover {
+	color: Maroon;
+       }
+    
+  </style>
+  <script>
+    function displayImage(imageFile) {
+      var largerImage = document.getElementById("mainImage");
+      var newNode = document.createElement("img");
+      newNode.id = "mainImage";
+      newNode.src = imageFile;
+      newNode.alt = "Large Image";
+      newNode.className = "mainImage";
+      newNode.style.width = "400px";
+      newNode.style.height = "300px";
+      largerImage.parentNode.replaceChild(newNode, largerImage);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Assignment 10.3: JavaScript - Part 2</h1>
+  <hr />
+
+  <p>Click an image below to view a larger version.</p>
+
+  <div>
+    <!-- Clickable Thumbnails -->
+    <img src="images/Space.jpg" onclick="displayImage('images/LargeSpace.jpg')" alt="Thumbnail 1" width="100" height="70">
+    <img src="images/Cat2.jpg" onclick="displayImage('images/LargeCat.jpg')" alt="Thumbnail 2" width="100" height="70">
+    <img src="images/Dog.jpg" onclick="displayImage('images/LargeDog.jpg')" alt="Thumbnail 3" width="100" height="70">
+  </div>
+
+  <br>
+
+  
+  <div>
+    <img id="mainImage" src="images/LargeSpace.jpg" alt="LargeSpace" class="mainImage" width="400" height="300">
+    
+  </div>
+ 
+ <div class="bottom">
+  <p><a href="../index.html">back to Landing Page</a></p>
+ </div>
+
+</body>
+</html>
