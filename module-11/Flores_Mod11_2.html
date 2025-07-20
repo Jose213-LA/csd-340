@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #todoList {
+      margin-top: 20px;
+    }
+
+     a {
+	float: right;
+	font-style: italic;
+	margin-top: 34%;
+	font-size: 16px;
+	color: white;
+      }
+
+    h1 {
+	text-align: center;	
+	background-color: DarkSlateGray;
+	color: white;
+	padding-top: 1%;
+	padding-bottom: 1%;
+       }  
+
+    
+
+   
+
+    .bottom a {
+	background-color: DarkSlateGray;
+	border: 1px solid DarkSlateGray;
+	width: 100%;
+	text-align: right;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	padding-right: 1%;
+      }	
+
+      a:hover {
+	color: Maroon;
+       }
+
+     
+  </style>
+</head>
+<body>
+
+  <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+  <p>This is an interactive To Do List. Type in your first item in the text box,
+     then click Add. Click the Display button to see current items in the list.
+     Click on Delete Last Entry if you'd like to remove the last entry.</p>
+
+  <input type="text" id="taskInput" placeholder="Enter a new task here" />
+  <br>
+
+  <button onclick="addItem()">Add</button>
+  <button onclick="deleteLastItem()">Delete Last Entry</button>
+  <button onclick="displayList()">Display</button>
+
+  <div id="todoList"></div>
+
+ <div class="bottom">
+  <p><a href="../index.html">back to Landing Page</a></p>
+ </div>
+
+  <script>
+    let todoArray = [];
+
+    function addItem() {
+      const input = document.getElementById("taskInput");
+      const task = input.value.trim();
+
+      if (task !== "") {
+        todoArray.push(task);
+        alert(`Added: "${task}" at position ${todoArray.length}`);
+        input.value = "";
+        input.focus();
+      } else {
+        alert("Please enter a task before clicking Add.");
+      }
+    }
+
+    function deleteLastItem() {
+      if (todoArray.length > 0) {
+        const removed = todoArray.pop();
+        alert(`Removed: "${removed}"`);
+      } else {
+        alert("There are no items to remove.");
+      }
+    }
+
+    function displayList() {
+      const listDiv = document.getElementById("todoList");
+      listDiv.innerHTML = ""; // clear previous list
+
+      if (todoArray.length === 0) {
+        listDiv.innerHTML = "<p>Your to-do list is empty.</p>";
+        return;
+      }
+
+      const ul = document.createElement("ul");
+
+      for (let i = 0; i < todoArray.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = `${i + 1}. ${todoArray[i]}`;
+        ul.appendChild(li);
+      }
+
+      listDiv.appendChild(ul);
+    }
+  </script>
+
+</body>
+</html>
