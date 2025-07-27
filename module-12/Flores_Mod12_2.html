@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <link rel="stylesheet" href="Flores_Mod12_2.css">
+  <style>
+    #bookList {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+    button {
+      margin: 10px 5px;
+      padding: 10px;
+      cursor: pointer;
+      background-color: DarkSlateGray;
+      color: white
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+    <div id="main">
+      <div class="left">
+        <h3>Top 10 Favorite Books</h3>
+	
+        <!-- Buttons -->
+        <button onclick="displayTopToBottom()">Top to Bottom</button>
+        <button onclick="displayBottomToTop()">Bottom to Top</button>
+	<hr />
+        <!-- Book list will display here -->
+        <ol id="bookList"></ol>
+      </div>
+
+      <div class="right">
+        <h3>5 Things I've Learned Since the Course Started</h3>
+        <ul>
+          <li>How to write clean HTML.</li>
+          <li>Basic CSS styling.</li>
+          <li>How to use class, id, and div's.</li>
+          <li>Linking CSS to HTML.</li>
+          <li>Using borders and layout techniques.</li>
+        </ul>
+      </div>
+    </div>
+
+     <div class="bottom">
+       <p><a href="../index.html">back to Landing Page</a></p>
+     </div>
+  </div>
+
+  <script>
+    // Book array
+    const books = [
+      "The Hobbit.",
+      "To Kill a Mockingbird.",
+      "Siddhartha.",
+      "Harry Potter.",
+      "Pride and Prejudice.",
+      "The Great Gatsby.",
+      "Jane Eyre.",
+      "The Catcher in the Rye.",
+      "The Alchemist.",
+      "Animal Farm."
+    ];
+
+    // Function to display books from top to bottom
+    function displayTopToBottom() {
+      const list = document.getElementById("bookList");
+      list.innerHTML = "";
+      books.forEach(book => {
+        const li = document.createElement("li");
+        li.textContent = book;
+        list.appendChild(li);
+      });
+    }
+
+    // Function to display books from bottom to top
+    function displayBottomToTop() {
+      const list = document.getElementById("bookList");
+      list.innerHTML = "";
+      [...books].reverse().forEach(book => {
+        const li = document.createElement("li");
+        li.textContent = book;
+        list.appendChild(li);
+      });
+    }
+
+    // Show the books in default order when page loads
+    displayTopToBottom();
+  </script>
+</body>
+</html>

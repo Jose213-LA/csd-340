@@ -1,0 +1,67 @@
+h1 {
+	text-align: center;
+	background-color: DarkSlateGray;
+	color: white
+}
+
+.left {
+	width: 45%;
+	border: 1px solid red;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+
+.right {
+	width: 45%;
+	border: 1px dashed red;
+	border-radius: 15px;
+	padding: 10px;
+	margin-bottom: 5%;
+	
+}
+
+
+ul {
+	list-style-type: upper-roman;
+	list-style-position: inside;
+}
+
+ol {
+	list-style-position: inside;
+}
+
+
+
+h3 {
+	font-weight: 500;
+}
+
+
+li {
+	font-weight: 300;
+}
+
+
+.bottom {
+	background-color: DarkSlateGray;
+	border: 1px solid DarkSlateGray;
+	width: 100%;
+	text-align: right;
+	margin-top: 25%;
+}
+
+
+a {
+	color: white;
+	padding-right: 1%;
+	font-style: italic;
+	
+}	
+
+      
+
+#main {
+	display: flex;
+	justify-content: space-between;
+}
